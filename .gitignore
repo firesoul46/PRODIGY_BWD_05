@@ -1,0 +1,14 @@
+# Environments
+.env
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Database
+hotel.db
+
+# OS files
+.DS_Store
