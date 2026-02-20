@@ -16,22 +16,30 @@ A robust, secure backend built with **FastAPI** for managing hotel operations. T
 ### 1. Clone the repository
 git clone [https://github.com/firesoul46/PRODIGY_BWD_05.git]
 cd PRODIGY_BWD_05
+
 2. Create a Virtual Environment
 python -m venv venv
 # Activate on Windows:
 venv\Scripts\activate
 # Activate on Mac/Linux:
 source venv/bin/activate
+
 3. Install Dependencies
 python -m pip install fastapi uvicorn sqlalchemy python-jose[cryptography] bcrypt python-dotenv
+
 4. Configure Environment Variables
-Create a file named .env in the root directory and add your secret key:Code snippetSECRET_KEY=your_super_secret_key_here
+Create a file named .env in the root directory and add your secret key:
+Code snippetSECRET_KEY=your_super_secret_key_here
 (Note: Never commit your real .env file to GitHub!)
-🚦 UsageStart the ServerBashpython -m uvicorn main:app --reload
+
+🚦 UsageStart the Server
+python -m uvicorn main:app --reload
+
 API Documentation 
 Once the server is running, you can access the interactive API docs at:
 Swagger UI: http://127.0.0.1:8000/docs
 ReDoc: http://127.0.0.1:8000/redoc
+
 🔒 Endpoints
 Method,Endpoint,Description
 POST,/register,Create a new user account with a hashed password.
