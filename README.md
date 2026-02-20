@@ -76,4 +76,5 @@ PRODIGY_BWD_05/
 └── hotel.db          # Local SQLite database
 
 🛡️ Security
+
 This project follows security best practices:No Secrets in Code: All sensitive data is stored in environment variables.Secure Hashing: Passwords are never stored in plain text; they are salted and hashed using bcrypt.Integrity: Database ensures unique email constraints to prevent duplicate accounts.
