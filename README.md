@@ -46,6 +46,7 @@ ReDoc: http://127.0.0.1:8000/redoc
 🔒 Endpoints
 
 Method,Endpoint,Description
+
 POST,/register,Create a new user account with a hashed password.
 POST,/login,Authenticate user and receive a JWT access token.
 GET,/,Root health check.
