@@ -33,6 +33,7 @@ Code snippetSECRET_KEY=your_super_secret_key_here
 (Note: Never commit your real .env file to GitHub!)
 
 🚦 UsageStart the Server
+
 python -m uvicorn main:app --reload
 
 API Documentation 
