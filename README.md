@@ -48,20 +48,31 @@ ReDoc: http://127.0.0.1:8000/redoc
 Method,Endpoint,Description
 
 POST,/register,Create a new user account with a hashed password.
+
 POST,/login,Authenticate user and receive a JWT access token.
+
 GET,/,Root health check.
 
 📁 Project Structure
 
 PRODIGY_BWD_05/
+
 ├── venv/             # Virtual environment
+
 ├── .env              # Private secrets (ignored by git)
+
 ├── .gitignore        # Files to exclude from GitHub
+
 ├── main.py           # API routes and application logic
+
 ├── auth.py           # Security and JWT logic
+
 ├── models.py         # SQLAlchemy database models
+
 ├── database.py       # Database connection setup
+
 ├── README.md         # Project documentation
+
 └── hotel.db          # Local SQLite database
 
 🛡️ Security
