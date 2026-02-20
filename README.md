@@ -28,8 +28,19 @@ python -m pip install fastapi uvicorn sqlalchemy python-jose[cryptography] bcryp
 Create a file named .env in the root directory and add your secret key:Code snippetSECRET_KEY=your_super_secret_key_here
 (Note: Never commit your real .env file to GitHub!)
 🚦 UsageStart the ServerBashpython -m uvicorn main:app --reload
-API DocumentationOnce the server is running, you can access the interactive API docs at:Swagger UI: http://127.0.0.1:8000/docsReDoc: http://127.0.0.1:8000/redoc🔒 EndpointsMethodEndpointDescriptionPOST/registerCreate a new user account with a hashed password.POST/loginAuthenticate user and receive a JWT access token.GET/Root health check.
-📁 Project StructurePlaintexthotel_api/
+API Documentation 
+Once the server is running, you can access the interactive API docs at:
+Swagger UI: http://127.0.0.1:8000/docs
+ReDoc: http://127.0.0.1:8000/redoc
+🔒 Endpoints
+Method,Endpoint,Description
+POST,/register,Create a new user account with a hashed password.
+POST,/login,Authenticate user and receive a JWT access token.
+GET,/,Root health check.
+
+📁 Project Structure
+
+PRODIGY_BWD_05/
 ├── venv/             # Virtual environment
 ├── .env              # Private secrets (ignored by git)
 ├── .gitignore        # Files to exclude from GitHub
@@ -39,5 +50,6 @@ API DocumentationOnce the server is running, you can access the interactive API 
 ├── database.py       # Database connection setup
 ├── README.md         # Project documentation
 └── hotel.db          # Local SQLite database
+
 🛡️ Security
 This project follows security best practices:No Secrets in Code: All sensitive data is stored in environment variables.Secure Hashing: Passwords are never stored in plain text; they are salted and hashed using bcrypt.Integrity: Database ensures unique email constraints to prevent duplicate accounts.
